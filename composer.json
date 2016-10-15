@@ -27,7 +27,7 @@
     "target-dir" : "JGuido/Bundle/WidgetBundle",
     "extra": {
         "branch-alias": {
-            "dev-master": "dev-master"
+            "dev-master": "master"
         }
     }
 }
