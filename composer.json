@@ -23,6 +23,5 @@
         "psr-4": {
             "WidgetBundle\\": ""
         }
-    },
-    "target-dir" : "JGuido/Bundle/WidgetBundle"
+    }
 }
