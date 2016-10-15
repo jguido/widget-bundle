@@ -1,0 +1,2 @@
+async_include_error: "Une erreur est intervenue lors du chargement de la page. Si l'erreur persiste, merci de contacter le service support."
+async_dom_loading_error: "La page ne s'est pas chargée entièrement. Vous risquez de rencontrer des anomalies."

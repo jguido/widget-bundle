@@ -1,0 +1,41 @@
+<?php
+
+
+namespace WidgetBundle\Widget;
+
+
+use WidgetBundle\Base\BaseWidget;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Response;
+
+class #NAME_CAMEL#Widget extends BaseWidget
+{
+
+    /**
+     * @param $params
+     * @return mixed
+     */
+    protected function getData($params)
+    {
+        throw new \Exception("Not implemented");
+    }
+
+    /**
+     * @param array|null $params
+     * @return string
+     */
+    public function getUri(array $params = null)
+    {
+        return $this->generateUrl('path_widget_#NAME_LOWER#', $params);
+    }
+
+    /**
+     * @return Response
+     * @internal param Request $request
+     * @Route("/widgets/#NAME_LOWER#/render", name="path_widget_#NAME_LOWER#")
+     */
+    public function widgetAction()
+    {
+        return $this->render('WidgetBundle:#NAME_CAMEL#:#NAME_LOWER#.html.twig');
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "name": "jguido/widget-bundle",
+    "description": "This Bundle add a widget system for rendering data a generic way. It also permit a generation of widget files.",
+    "keywords": ["widget", "generator", "symfony3", "bundle"],
+    "type": "symfony-bundle",
+    "license": "GNU",
+    "authors": [
+        {
+            "name":     "Jeremy Guido",
+            "homepage": "https://github.com/jguido",
+            "email":    "dje.guido@gmail.com"
+        }
+    ],
+    "support": {
+        "email": "dje.guido@gmail.com",
+        "issues": "https://github.com/jguido/widget-bundle/issues"
+    },
+    "require": {
+        "php":             ">=5.5.6",
+        "symfony/symfony": "~2.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "WidgetBundle\\": ""
+        }
+    },
+    "target-dir" : "JGuido/Bundle/WidgetBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "dev-master"
+        }
+    }
+}

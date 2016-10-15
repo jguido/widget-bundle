@@ -1,0 +1,9 @@
+imports:
+    - { resource: widget.yml }
+services:
+
+    twig.widget_extension:
+        class: WidgetBundle\Twig\WidgetExtension
+        arguments: [ "@service_container" ]
+        tags:
+            - { name: twig.extension }
