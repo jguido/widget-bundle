@@ -24,10 +24,5 @@
             "WidgetBundle\\": ""
         }
     },
-    "target-dir" : "JGuido/Bundle/WidgetBundle",
-    "extra": {
-        "branch-alias": {
-            "dev-master": "master"
-        }
-    }
+    "target-dir" : "JGuido/Bundle/WidgetBundle"
 }
