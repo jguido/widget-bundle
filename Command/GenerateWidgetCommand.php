@@ -12,9 +12,9 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 class GenerateWidgetCommand extends ContainerAwareCommand
 {
-    private $serviceFile = __DIR__.'/../Resources/config/widget.yml';
-    private $widgetPath = __DIR__.'/../Widget';
-    private $viewPath = __DIR__.'/../Resources/views';
+    private $serviceFile;
+    private $widgetPath;
+    private $viewPath;
     private $nameCamelTag = "#NAME_CAMEL#";
     private $nameLowerTag = "#NAME_LOWER#";
 
@@ -27,8 +27,17 @@ class GenerateWidgetCommand extends ContainerAwareCommand
         ;
     }
 
+    private function makeRoutes()
+    {
+        $baseRoute = $this->getContainer()->getParameter('kernel.root_dir').'/../src/ApplicationWidgetBundle/';
+        $this->serviceFile = $baseRoute.'Resources/config/widgets.yml';
+        $this->widgetPath = $baseRoute.'Widget';
+        $this->viewPath = $baseRoute.'Resources/views';
+    }
+
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $this->makeRoutes();
         $io = new SymfonyStyle($input, $output);
         $name = $input->getArgument('name');
 

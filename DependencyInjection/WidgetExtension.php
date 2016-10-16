@@ -24,5 +24,21 @@ class WidgetExtension extends Extension
 
         $loader = new Loader\YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.yml');
+
+        $bundleDir = $container->getParameter('kernel.root_dir').'/../src/ApplicationWidgetBundle';
+        if (!is_dir($bundleDir)) {
+            mkdir($bundleDir);
+            mkdir($bundleDir.'/Resources');
+            mkdir($bundleDir.'/Resources/config');
+            mkdir($bundleDir.'/Resources/views');
+            mkdir($bundleDir.'/Widget');
+
+            $dirWidget = __DIR__.'/../Command/skeletons';
+
+            $configFile = file_get_contents($dirWidget.'/widget.yml');
+            file_put_contents($bundleDir."/Resources/config/widgets.yml", $configFile);
+            $widgetFile = file_get_contents($dirWidget.'/WidgetBundle.php');
+            file_put_contents($bundleDir.'/ApplicationWidgetBundle.php', $widgetFile);
+        }
     }
 }

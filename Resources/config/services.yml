@@ -1,5 +1,3 @@
-imports:
-    - { resource: widget.yml }
 services:
 
     twig.widget_extension:

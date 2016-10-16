@@ -1,7 +1,7 @@
 <?php
 
 
-namespace WidgetBundle\Widget;
+namespace ApplicationWidgetBundle\Widget;
 
 
 use WidgetBundle\Base\BaseWidget;
@@ -36,6 +36,6 @@ class #NAME_CAMEL#Widget extends BaseWidget
      */
     public function widgetAction()
     {
-        return $this->render('WidgetBundle:#NAME_CAMEL#:#NAME_LOWER#.html.twig');
+        return $this->render('ApplicationWidgetBundle:#NAME_CAMEL#:#NAME_LOWER#.html.twig');
     }
 }
