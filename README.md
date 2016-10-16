@@ -4,7 +4,7 @@
 Then add this bundle to your kernel (app/AppKernel.php) :
 
     new WidgetBundle\WidgetBundle(),
-    new WidgetBundle\ApplicationWidgetBundle(),
+    new ApplicationWidgetBundle\ApplicationWidgetBundle(),
 
 Add in app/config/routing.yml
 
