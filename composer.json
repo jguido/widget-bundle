@@ -3,7 +3,7 @@
     "description": "This Bundle add a widget system for rendering data a generic way. It also permit a generation of widget files.",
     "keywords": ["widget", "generator", "symfony3", "bundle"],
     "type": "symfony-bundle",
-    "license": "GNU",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name":     "Jeremy Guido",
